@@ -14,9 +14,9 @@ def get_days_from_today(date: str) -> int:
     """
     The function that calculates the number of days between a given date and the current date.
     Args:
-        * date: str - a date in ISO format ('YYYY-MM-DD')
+        * date (str): a date in ISO format ('YYYY-MM-DD')
     Returns:
-        * days_difference: int - the difference in days as an integer. 
+        * days_difference (int): the difference in days as an integer. 
     """
     
     while True:
