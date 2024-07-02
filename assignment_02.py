@@ -49,5 +49,5 @@ min_user_value= get_valid_input_number("Enter a number for the MIN value >>>> ")
 max_user_value = get_valid_input_number("Enter a number for the MAX value >>>> ")
 quantity_user_value = get_valid_input_number("Enter a number for the QUANTITY value >>>> ")
 
-result = get_numbers_ticket(min_user_value, max_user_value, quantity_user_value)
-print(result)
+lottery_numbers = get_numbers_ticket(min_user_value, max_user_value, quantity_user_value)
+print("Ваші лотерейні числа:", lottery_numbers)
