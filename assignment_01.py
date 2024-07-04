@@ -9,6 +9,7 @@
 '''
 
 from datetime import datetime
+import re
 
 def get_days_from_today(date: str) -> int:
     """
@@ -21,7 +22,10 @@ def get_days_from_today(date: str) -> int:
     
     while True:
         try:
-            date_given = datetime.strptime(date, '%Y-%m-%d').date()
+            match = re.match(r"^(\d{4}-\d{2}-\d{2}).*", date)
+            if not match:
+                raise ValueError("Date must start with 'YYYY-MM-DD' format, but got: {date}")
+            date_given = datetime.strptime(match.group(1), '%Y-%m-%d').date()
             break
         except ValueError as e:
             date = input(f"{e}. Please, enter a date in ISO format => 'YYYY-MM-DD' >>>> ")
